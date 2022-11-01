@@ -1,9 +1,10 @@
 // PEGAR DATA E MANDAR PARA O SERVICE
-import { ORDERS, ORDERS_FINAL_RESPONSE } from '../data/mockOrders';
+import { ORDERS } from '../data/mockOrders';
 
 const productListMachine = () => {
-  const newData = ORDERS.orderList[0];
-  return ORDERS_FINAL_RESPONSE;
+  // Aqui deveremos fazer a logica para resolver o problema
+  const data = ORDERS;
+  return "";
 };
 
 export default { productListMachine };
