@@ -4,7 +4,7 @@
 
 **Identificando os tipos de Produtos e seus respectivos Status**
 
-Utilizando o arquivo mockOrders dentro da pasta de Orders, siga as regras de negócio para retornar um array final de acordo com o exemplo abaixo :
+Utilizando o arquivo **mockOrders** dentro da pasta de **Orders**, siga as regras de negócio para retornar um array final de acordo com o exemplo abaixo :
 
 **Exemplo de Resposta Final**
 
@@ -116,11 +116,49 @@ CANCEL_FLIGHT === Valor do prodcut type
 
 8. CONDIÇÃO == booking !== NULL
 
-- flight !== NULL === orderList[].itemList[].booking.flight === FLIGHT_BUY,
-- seat !== NULL === orderList[].itemList[].booking.seat === SEAT_BUY,
-- baggage !== NULL === orderList[].itemList[].booking.baggage === BAGGAGE_BUY,
+    - flight !== NULL === orderList[].itemList[].booking.flight === FLIGHT_BUY,
+    - seat !== NULL === orderList[].itemList[].booking.seat === SEAT_BUY,
+    - baggage !== NULL === orderList[].itemList[].booking.baggage === BAGGAGE_BUY,
 
 9. CONDIÇÃO == cancelBooking !== NULL
 
-- flight !== NULL === orderList[].itemList[].cancelBooking.flight === CANCEL_FLIGHT
-- baggage !== NULL === orderList[].itemList[].cancelBooking.baggage === BAGGAGE_CANCEL
+    - flight !== NULL === orderList[].itemList[].cancelBooking.flight === CANCEL_FLIGHT
+    - baggage !== NULL === orderList[].itemList[].cancelBooking.baggage === BAGGAGE_CANCEL
+
+### Regras do Status
+
+1. Aprovado
+    **Somente quando o porduto é do tipo compra, trasnferência, reativação, extensão de milhas e foi pago via PIX**
+    - orderList[].itemList[].miles &&
+    - orderList[].itemList[].paymentData.gateway == PIX &&
+    - orderList[].status === PROCESSED &&
+    - orderList[].subStatus === PROCESSED
+
+2. Cancelado
+    **Somente quando o porduto é do tipo compra, trasnferência, reativação, extensão de milhas e foi pago via PIX**
+    - orderList[].itemList[].miles &&
+    - orderList[].itemList[].paymentData.gateway == PIX &&
+    - orderList[].status === CANCELLED 
+
+3. Pendente
+    **Somente quando o porduto é do tipo compra, trasnferência, reativação, extensão de milhas e foi pago via PIX**
+    - orderList[].itemList[].miles &&
+    - orderList[].itemList[].paymentData.gateway == PIX &&
+    - orderList[].status != PROCESSED &&
+    - orderList[].status != CANCELLED 
+
+4. Pedido Cancelado
+    - orderList.status === CANCELLED
+
+5. Pagamento pendente 
+    - orderList[].status === PENDING_PAYMENT
+
+6. Concluído
+    - orderList[].status === PROCESSED
+
+7. Pagamento Aprovado 
+    - orderList[].status === PENDING_APPROVAL
+
+8. recebido 
+    - Qualquer status diferente dos anteriores
+### Regras de Miles e Money
