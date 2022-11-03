@@ -6,7 +6,7 @@
 
 Utilizando o arquivo mockOrders dentro da pasta de Orders, siga as regras de negócio para retornar um array final de acordo com o exemplo abaixo :
 
-\*\*Exemplo de Resposta Final
+**Exemplo de Resposta Final**
 
 ```ts
 [
