@@ -162,3 +162,5 @@ CANCEL_FLIGHT === Valor do prodcut type
 8. recebido 
     - Qualquer status diferente dos anteriores
 ### Regras de Miles e Money
+
+Miles e Money devem ser enviados em number e estão dentro de orderList[].totals.total
