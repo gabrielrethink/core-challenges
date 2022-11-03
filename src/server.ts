@@ -17,7 +17,7 @@ app.use(expressStatusMonitor());
 
 app.use("/api", router);
 
-app.get("", (request: Request, response: Response) => {
+app.get("/", (request: Request, response: Response) => {
   response.send("Trabalho RA Core Challenges - Versão 01");
 });
 

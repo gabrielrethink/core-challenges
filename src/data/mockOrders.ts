@@ -1,3 +1,5 @@
+import { ReturnObjectType } from '../ProductList/types';
+
 export const ORDERS: any = {
   orderList: [
     {
@@ -454,7 +456,7 @@ export const ORDERS: any = {
             cardType: "CREDIT",
             gateway: "Pix",
             qrCode:
-              "https://test.adyen.com/hpp/generateQRCodeImage.shtml?url=TestQRCodeEMVToken",
+              "https:test.adyen.com/hpp/generateQRCodeImage.shtml?url=TestQRCodeEMVToken",
             qrCodeData: "TestQRCodeEMVToken",
             pspReferenceQrCode: "F2FKGRXJ7QHG5S82",
             merchantAccountCode: "VendaDeMilhas",
@@ -468,7 +470,7 @@ export const ORDERS: any = {
               cardType: "CREDIT",
               gateway: "Pix",
               qrCode:
-                "https://test.adyen.com/hpp/generateQRCodeImage.shtml?url=TestQRCodeEMVToken",
+                "https:test.adyen.com/hpp/generateQRCodeImage.shtml?url=TestQRCodeEMVToken",
               qrCodeData: "TestQRCodeEMVToken",
               pspReferenceQrCode: "F2FKGRXJ7QHG5S82",
               merchantAccountCode: "VendaDeMilhas",
@@ -1589,7 +1591,7 @@ export const ORDERS: any = {
             cardType: "CREDIT",
             gateway: "Pix",
             qrCode:
-              "https://test.adyen.com/hpp/generateQRCodeImage.shtml?url=TestQRCodeEMVToken",
+              "https:test.adyen.com/hpp/generateQRCodeImage.shtml?url=TestQRCodeEMVToken",
             qrCodeData: "TestQRCodeEMVToken",
             pspReferenceQrCode: "FMBQV6TL3JHKGK82",
             merchantAccountCode: "VendaDeMilhas",
@@ -1603,7 +1605,7 @@ export const ORDERS: any = {
               cardType: "CREDIT",
               gateway: "Pix",
               qrCode:
-                "https://test.adyen.com/hpp/generateQRCodeImage.shtml?url=TestQRCodeEMVToken",
+                "https:test.adyen.com/hpp/generateQRCodeImage.shtml?url=TestQRCodeEMVToken",
               qrCodeData: "TestQRCodeEMVToken",
               pspReferenceQrCode: "FMBQV6TL3JHKGK82",
               merchantAccountCode: "VendaDeMilhas",
@@ -2257,7 +2259,7 @@ export const ORDERS: any = {
                   freeMileage: "true",
                   mileage: "0",
                   referenceId:
-                    "+QoAAB+LCAAAAAAABACFVkty2zgQvYoKa9EFUPzvZFlOVOPYqljJZpQFIkIaVEhCA5KOKi6dZhZzkFxsGgQ/oEiNuHBZ6If+vm70O9qIHyxbU7njNEERskPihfChKXrieUEXIov5joqFSFmN+fMdrWKWFXwPgljIEYht+/C57vQG0jahX5nMqYCTKXoGwMueyYKCS/qfyWtBs5jKGDxbiJgfxIZKvlcAjAlxZnD+wPKdyAqxBu1gtqTJJ57xFHQG/l2Ase0SEmB3FEhPY8B5Ifn3shB54w0Ery5LFUYjBBf+SCdP/E0ydJ6OAxqLk6OQk3lWsB0/0t///v5HoPO3JqJFwsEbpkIivuvNiIM6UZkXTC5P8CcDhVmZJDpP45LWh3GxVrp8A3PiQrThR/EgdmWqZK0h+CmHxzoryxSsFfTvEjzf0yRnU7QWeV7yDZOpyHXVBctRVMiS9bxeZT3bfbbchswhuZlIORRm1maKZoqCdTCK3ZBPyyWz0PVcF0NGP7GCxnAdzt+3cptNJtu+2vtEQDBcbFE0qfQ0KG1hfmAZsPczK7gERQq1RfPF/ZenLWqhOrf6gkLYPu7U6MhqPR3GsUPPb1Ga358Z5LjCaTtATtsPDEMathBSsvwIqVYMaqCqLwzooP8M95o2bLAfZHk03N+ie0PRAy3oRyEHztngnIVDyw43BEczJ3L8O5tgz/GJhWcRxqM6zDRWGgi2SLjBIVy4uFN30StPjwnL1ZW6gqZUHff6WEPO19R8OR7AgSpp70PQI+UnOmBCTzquYAk9UUC6L7x85m8sUWdk2h1WalYZ32nSBZeiR55WVQoNgUrgWsIgUayFqpolCCzb3RASYTsi4Z1P/C0aJIFnNK3d64W2Ag6dGoWG4x0ZiIM91/CkarlObGjrmKRHW6/NRrA1zORdMwpbGhgdVI+uW1p7c+62C+bYuYVW07KdQtrh2Uiua7bouNZSpAIqDUkbJr//XhZdYR0PPop3FoO2tpxdYFsB86DQNg7tvUfiMDDHwsXE/n9DG5jfbH4/AF0oqauj/Rlpy24cKF6KR366YfcjZK9gObtmv1F8C7eq5preMAopkutA0zpsPTRhCc9TcQ2/pgdahd482XEVkX7lRpXOoWCwVuSquvxXPdeu+6C4k6oiVxnLB+CvNLkKUpgzah7bAbfax3hEYm4BD/ytTA5KvblWaHh39iL5gaUogsavSK/vmuvGKMFrSkBy631N8tuX2te72h+W7QJxHVg5NFhD0Uu1P32XVD6L17/Ezzol52/n/wBsIosv+QoAAA==",
+                    "+QoAAB+LCAAAAAAABACFVkty2zgQvYoKa9EFUPzvZFlOVOPYqljJZpQFIkIaVEhCA5KOKi6dZhZzkFxsGgQ/oEiNuHBZ6If+vm70O9qIHyxbU7njNEERskPihfChKXrieUEXIov5joqFSFmN+fMdrWKWFXwPgljIEYht+/C57vQG0jahX5nMqYCTKXoGwMueyYKCS/qfyWtBs5jKGDxbiJgfxIZKvlcAjAlxZnD+wPKdyAqxBu1gtqTJJ57xFHQG/l2Ase0SEmB3FEhPY8B5Ifn3shB54w0Ery5LFUYjBBf+SCdP/E0ydJ6OAxqLk6OQk3lWsB0/0t/v5HoPO3JqJFwsEbpkIivuvNiIM6UZkXTC5P8CcDhVmZJDpP45LWh3GxVrp8A3PiQrThR/EgdmWqZK0h+CmHxzoryxSsFfTvEjzf0yRnU7QWeV7yDZOpyHXVBctRVMiS9bxeZT3bfbbchswhuZlIORRm1maKZoqCdTCK3ZBPyyWz0PVcF0NGP7GCxnAdzt+3cptNJtu+2vtEQDBcbFE0qfQ0KG1hfmAZsPczK7gERQq1RfPF/ZenLWqhOrf6gkLYPu7U6MhqPR3GsUPPb1Ga358Z5LjCaTtATtsPDEMathBSsvwIqVYMaqCqLwzooP8M95o2bLAfZHk03N+ie0PRAy3oRyEHztngnIVDyw43BEczJ3L8O5tgz/GJhWcRxqM6zDRWGgi2SLjBIVy4uFN30StPjwnL1ZW6gqZUHff6WEPO19R8OR7AgSpp70PQI+UnOmBCTzquYAk9UUC6L7x85m8sUWdk2h1WalYZ32nSBZeiR55WVQoNgUrgWsIgUayFqpolCCzb3RASYTsi4Z1P/C0aJIFnNK3d64W2Ag6dGoWG4x0ZiIM91/CkarlObGjrmKRHW6/NRrA1zORdMwpbGhgdVI+uW1p7c+62C+bYuYVW07KdQtrh2Uiua7bouNZSpAIqDUkbJrXhZdYR0PPop3FoO2tpxdYFsB86DQNg7tvUfiMDDHwsXE/n9DG5jfbH4/AF0oqauj/Rlpy24cKF6KR366YfcjZK9gObtmv1F8C7eq5preMAopkutA0zpsPTRhCc9TcQ2/pgdahd482XEVkX7lRpXOoWCwVuSquvxXPdeu+6C4k6oiVxnLB+CvNLkKUpgzah7bAbfax3hEYm4BD/ytTA5KvblWaHh39iL5gaUogsavSK/vmuvGKMFrSkBy631N8tuX2te72h+W7QJxHVg5NFhD0Uu1P32XVD6L17/Ezzol52/n/wBsIosv+QoAAA==",
                   requestorId: "1756314",
                 },
                 {
@@ -2707,7 +2709,7 @@ export const ORDERS: any = {
             cardType: "CREDIT",
             gateway: "Pix",
             qrCode:
-              "https://test.adyen.com/hpp/generateQRCodeImage.shtml?url=TestQRCodeEMVToken",
+              "https:test.adyen.com/hpp/generateQRCodeImage.shtml?url=TestQRCodeEMVToken",
             qrCodeData: "TestQRCodeEMVToken",
             pspReferenceQrCode: "HZZGP65LGQRXGN82",
             merchantAccountCode: "VendaDeMilhas",
@@ -2721,7 +2723,7 @@ export const ORDERS: any = {
               cardType: "CREDIT",
               gateway: "Pix",
               qrCode:
-                "https://test.adyen.com/hpp/generateQRCodeImage.shtml?url=TestQRCodeEMVToken",
+                "https:test.adyen.com/hpp/generateQRCodeImage.shtml?url=TestQRCodeEMVToken",
               qrCodeData: "TestQRCodeEMVToken",
               pspReferenceQrCode: "HZZGP65LGQRXGN82",
               merchantAccountCode: "VendaDeMilhas",
@@ -2816,7 +2818,7 @@ export const ORDERS: any = {
             cardType: "CREDIT",
             gateway: "Pix",
             qrCode:
-              "https://test.adyen.com/hpp/generateQRCodeImage.shtml?url=TestQRCodeEMVToken",
+              "https:test.adyen.com/hpp/generateQRCodeImage.shtml?url=TestQRCodeEMVToken",
             qrCodeData: "TestQRCodeEMVToken",
             pspReferenceQrCode: "W6SWSFMRZ5ZW8N82",
             merchantAccountCode: "VendaDeMilhas",
@@ -2830,7 +2832,7 @@ export const ORDERS: any = {
               cardType: "CREDIT",
               gateway: "Pix",
               qrCode:
-                "https://test.adyen.com/hpp/generateQRCodeImage.shtml?url=TestQRCodeEMVToken",
+                "https:test.adyen.com/hpp/generateQRCodeImage.shtml?url=TestQRCodeEMVToken",
               qrCodeData: "TestQRCodeEMVToken",
               pspReferenceQrCode: "W6SWSFMRZ5ZW8N82",
               merchantAccountCode: "VendaDeMilhas",
@@ -2910,7 +2912,7 @@ export const ORDERS: any = {
   pageNumber: "0",
 };
 
-export const ORDERS_FINAL_RESPONSE = [
+export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
   {
     items: [
       {
