@@ -101,7 +101,7 @@ CANCEL_FLIGHT === Valor do prodcut type
 
    - BOOKING = orderList[].itemList[].milesBack.type === MILES_BACK_BOOKING
    - REGULARIZATION = orderList[].itemList[].milesBack.type === MILES_BACK_REGULARIZATION
-   - __MILES_BACK_DEFAULT_KEY__ = orderList[].itemList[].milesBack.type === MILES_BACK
+   - \_\_MILES_BACK_DEFAULT_KEY\_\_ = orderList[].itemList[].milesBack.type === MILES_BACK
 
 6. CONDIÇÃO VALUE OF == cancelFee.type
 
@@ -109,58 +109,66 @@ CANCEL_FLIGHT === Valor do prodcut type
 
 7. CONDIÇÃO VALUE OF == cancelFee.type
 
-    - UPGRADE= orderList[].itemList[].membership.club.type = UPGRADE_CLUB_SMILES
-    - DOWNGRADE= orderList[].itemList[].membership.club.type = DOWNGRADE_CLUB_SMILES
-    - MEMBERSHIP= orderList[].itemList[].membership.club.type = CLUB_SMILES
-    - __CLUB_SMILES_DEFAULT_KEY__= orderList[].itemList[].membership.club.type = CLUB_SMILES
+   - UPGRADE= orderList[].itemList[].membership.club.type = UPGRADE_CLUB_SMILES
+   - DOWNGRADE= orderList[].itemList[].membership.club.type = DOWNGRADE_CLUB_SMILES
+   - MEMBERSHIP= orderList[].itemList[].membership.club.type = CLUB_SMILES
+   - \_\_CLUB_SMILES_DEFAULT_KEY\_\_= orderList[].itemList[].membership.club.type = CLUB_SMILES
 
 8. CONDIÇÃO == booking !== NULL
 
-    - flight !== NULL === orderList[].itemList[].booking.flight === FLIGHT_BUY,
-    - seat !== NULL === orderList[].itemList[].booking.seat === SEAT_BUY,
-    - baggage !== NULL === orderList[].itemList[].booking.baggage === BAGGAGE_BUY,
+   - flight !== NULL === orderList[].itemList[].booking.flight === FLIGHT_BUY,
+   - seat !== NULL === orderList[].itemList[].booking.seat === SEAT_BUY,
+   - baggage !== NULL === orderList[].itemList[].booking.baggage === BAGGAGE_BUY,
 
 9. CONDIÇÃO == cancelBooking !== NULL
 
-    - flight !== NULL === orderList[].itemList[].cancelBooking.flight === CANCEL_FLIGHT
-    - baggage !== NULL === orderList[].itemList[].cancelBooking.baggage === BAGGAGE_CANCEL
+   - flight !== NULL === orderList[].itemList[].cancelBooking.flight === CANCEL_FLIGHT
+   - baggage !== NULL === orderList[].itemList[].cancelBooking.baggage === BAGGAGE_CANCEL
 
 ### Regras do Status
 
 1. Aprovado
-    **Somente quando o porduto é do tipo compra, trasnferência, reativação, extensão de milhas e foi pago via PIX**
-    - orderList[].itemList[].miles &&
-    - orderList[].itemList[].paymentData.gateway == PIX &&
-    - orderList[].status === PROCESSED &&
-    - orderList[].subStatus === PROCESSED
+   **Somente quando o porduto é do tipo compra, trasnferência, reativação, extensão de milhas e foi pago via PIX**
+
+   - orderList[].itemList[].miles &&
+   - orderList[].itemList[].paymentData.gateway == PIX &&
+   - orderList[].status === PROCESSED &&
+   - orderList[].subStatus === PROCESSED
 
 2. Cancelado
-    **Somente quando o porduto é do tipo compra, trasnferência, reativação, extensão de milhas e foi pago via PIX**
-    - orderList[].itemList[].miles &&
-    - orderList[].itemList[].paymentData.gateway == PIX &&
-    - orderList[].status === CANCELLED 
+   **Somente quando o porduto é do tipo compra, trasnferência, reativação, extensão de milhas e foi pago via PIX**
+
+   - orderList[].itemList[].miles &&
+   - orderList[].itemList[].paymentData.gateway == PIX &&
+   - orderList[].status === CANCELLED
 
 3. Pendente
-    **Somente quando o porduto é do tipo compra, trasnferência, reativação, extensão de milhas e foi pago via PIX**
-    - orderList[].itemList[].miles &&
-    - orderList[].itemList[].paymentData.gateway == PIX &&
-    - orderList[].status != PROCESSED &&
-    - orderList[].status != CANCELLED 
+   **Somente quando o porduto é do tipo compra, trasnferência, reativação, extensão de milhas e foi pago via PIX**
+
+   - orderList[].itemList[].miles &&
+   - orderList[].itemList[].paymentData.gateway == PIX &&
+   - orderList[].status != PROCESSED &&
+   - orderList[].status != CANCELLED
 
 4. Pedido Cancelado
-    - orderList.status === CANCELLED
 
-5. Pagamento pendente 
-    - orderList[].status === PENDING_PAYMENT
+   - orderList.status === CANCELLED
+
+5. Pagamento pendente
+
+   - orderList[].status === PENDING_PAYMENT
 
 6. Concluído
-    - orderList[].status === PROCESSED
 
-7. Pagamento Aprovado 
-    - orderList[].status === PENDING_APPROVAL
+   - orderList[].status === PROCESSED
 
-8. recebido 
-    - Qualquer status diferente dos anteriores
+7. Pagamento Aprovado
+
+   - orderList[].status === PENDING_APPROVAL
+
+8. recebido
+   - Qualquer status diferente dos anteriores
+
 ### Regras de Miles e Money
 
 Miles e Money devem ser enviados em number e estão dentro de orderList[].totals.total
