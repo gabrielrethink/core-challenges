@@ -61,8 +61,8 @@ Descrição:
 
 **CANCELLATION = orderList[].itemList[].fee.type === CANCEL_FLIGHT**
 
-CANCELLATION === valor existente no == orderList[].itemList[].fee.type
-orderList[].itemList[].fee.type === Caminho para encontrar o valor
+CANCELLATION === valor existente no == orderList[].itemList[].fee.type \
+orderList[].itemList[].fee.type === Caminho para encontrar o valor \
 CANCEL_FLIGHT === Valor do prodcut type
 
 1. CONDIÇÃO VALUE OF == fee.type
@@ -150,19 +150,19 @@ CANCEL_FLIGHT === Valor do prodcut type
    - orderList[].status != PROCESSED &&
    - orderList[].status != CANCELLED
 
-4. Pedido Cancelado
+4. Pedido Cancelado = CANCELLED
 
    - orderList.status === CANCELLED
 
-5. Pagamento pendente
+5. Pagamento pendente = PENDING
 
    - orderList[].status === PENDING_PAYMENT
 
-6. Concluído
+6. Concluído = CONCLUDED
 
    - orderList[].status === PROCESSED
 
-7. Pagamento Aprovado
+7. Pagamento Aprovado = PENDING_APPROVAL
 
    - orderList[].status === PENDING_APPROVAL
 

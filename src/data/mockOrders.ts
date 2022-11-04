@@ -2918,7 +2918,7 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
       {
         productType: "PURCHASE",
         status: "PENDING",
-        date: new Date("2022-09-29T10:47:34.367"),
+        date: new Date("2022-09-29T10:47:34.367").toISOString(),
         orderId: 13535153,
       },
     ],
@@ -2932,7 +2932,7 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
       {
         productType: "UBER_CREDIT_BUY",
         status: "APPROVED",
-        date: new Date("2022-09-27T13:56:11.574"),
+        date: new Date("2022-09-27T13:56:11.574").toISOString(),
         orderId: 13534511,
       },
     ],
@@ -2946,7 +2946,7 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
       {
         productType: "UBER_CREDIT_BUY",
         status: "CONCLUDED",
-        date: new Date("2022-09-27T14:00:10.567"),
+        date: new Date("2022-09-27T14:00:10.567").toISOString(),
         orderId: 13534513,
       },
     ],
@@ -2960,7 +2960,7 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
       {
         productType: "BAGGAGE_BUY",
         status: "CONCLUDED",
-        date: new Date("2022-09-27T14:10:43.119"),
+        date: new Date("2022-09-27T14:10:43.119").toISOString(),
         orderId: 13534517,
       },
     ],
@@ -2974,19 +2974,19 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
       {
         productType: "CANCEL_FLIGHT",
         status: "CONCLUDED",
-        date: new Date("2022-09-27T14:54:20.665"),
+        date: new Date("2022-09-27T14:54:20.665").toISOString(),
         orderId: 13534552,
       },
       {
         productType: "CANCEL_FLIGHT",
         status: "CONCLUDED",
-        date: new Date("2022-09-27T14:54:20.665"),
+        date: new Date("2022-09-27T14:54:20.665").toISOString(),
         orderId: 13534552,
       },
       {
         productType: "CANCEL_FLIGHT",
         status: "CONCLUDED",
-        date: new Date("2022-09-27T14:54:20.665"),
+        date: new Date("2022-09-27T14:54:20.665").toISOString(),
         orderId: 13534552,
       },
     ],
@@ -3000,19 +3000,19 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
       {
         productType: "BOARDING",
         status: "CONCLUDED",
-        date: new Date("2022-09-27T14:08:35.204"),
+        date: new Date("2022-09-27T14:08:35.204").toISOString(),
         orderId: 13534514,
       },
       {
         productType: "MILES_BACK_BOOKING",
         status: "CONCLUDED",
-        date: new Date("2022-09-27T14:08:35.204"),
+        date: new Date("2022-09-27T14:08:35.204").toISOString(),
         orderId: 13534514,
       },
       {
         productType: "FLIGHT_BUY",
         status: "CONCLUDED",
-        date: new Date("2022-09-27T14:08:35.204"),
+        date: new Date("2022-09-27T14:08:35.204").toISOString(),
         orderId: 13534514,
       },
     ],
@@ -3026,19 +3026,19 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
       {
         productType: "MILES_BACK_BOOKING",
         status: "CONCLUDED",
-        date: new Date("2022-09-27T14:47:20.869"),
+        date: new Date("2022-09-27T14:47:20.869").toISOString(),
         orderId: 13534541,
       },
       {
         productType: "FLIGHT_BUY",
         status: "CONCLUDED",
-        date: new Date("2022-09-27T14:47:20.869"),
+        date: new Date("2022-09-27T14:47:20.869").toISOString(),
         orderId: 13534541,
       },
       {
         productType: "BOARDING",
         status: "CONCLUDED",
-        date: new Date("2022-09-27T14:47:20.869"),
+        date: new Date("2022-09-27T14:47:20.869").toISOString(),
         orderId: 13534541,
       },
     ],
@@ -3051,8 +3051,8 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
     items: [
       {
         productType: "TRAVEL_INSURANCE_BUY",
-        status: "CANCELED",
-        date: new Date("2022-09-27T15:09:51.465"),
+        status: "CANCELLED",
+        date: new Date("2022-09-27T15:09:51.465").toISOString(),
         orderId: 13534558,
       },
     ],
@@ -3066,7 +3066,7 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
       {
         productType: "PURCHASE",
         status: "PENDING",
-        date: new Date("2022-09-29T10:51:14.163"),
+        date: new Date("2022-09-29T10:51:14.163").toISOString(),
         orderId: 13535154,
       },
     ],
@@ -3080,7 +3080,7 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
       {
         productType: "SEAT_BUY",
         status: "CONCLUDED",
-        date: new Date("2022-09-27T14:18:03.855"),
+        date: new Date("2022-09-27T14:18:03.855").toISOString(),
         orderId: 13534522,
       },
     ],
@@ -3094,7 +3094,7 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
       {
         productType: "UBER_CREDIT_BUY",
         status: "APPROVED",
-        date: new Date("2022-09-28T17:17:36.684"),
+        date: new Date("2022-09-28T17:17:36.684").toISOString(),
         orderId: 13534994,
       },
     ],
@@ -3108,7 +3108,7 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
       {
         productType: "MILES_REVALIDATION",
         status: "APPROVED",
-        date: new Date("2022-09-27T12:08:45.469"),
+        date: new Date("2022-09-27T12:08:45.469").toISOString(),
         orderId: 13534478,
       },
     ],
@@ -3122,7 +3122,7 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
       {
         productType: "UBER_PASS_BUY",
         status: "APPROVED",
-        date: new Date("2022-09-27T13:57:10.159"),
+        date: new Date("2022-09-27T13:57:10.159").toISOString(),
         orderId: 13534510,
       },
     ],
@@ -3136,7 +3136,7 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
       {
         productType: "MILES_TRANSFER",
         status: "APPROVED",
-        date: new Date("2022-09-27T12:21:42.482"),
+        date: new Date("2022-09-27T12:21:42.482").toISOString(),
         orderId: 13534481,
       },
     ],
@@ -3150,7 +3150,7 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
       {
         productType: "LOCALIZA_BUY",
         status: "CONCLUDED",
-        date: new Date("2022-09-29T10:37:43.689"),
+        date: new Date("2022-09-29T10:37:43.689").toISOString(),
         orderId: 13535140,
       },
     ],
@@ -3164,7 +3164,7 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
       {
         productType: "PURCHASE",
         status: "APPROVED",
-        date: new Date("2022-09-27T12:02:29.57"),
+        date: new Date("2022-09-27T12:02:29.57").toISOString(),
         orderId: 13534474,
       },
     ],
@@ -3178,7 +3178,7 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
       {
         productType: "PURCHASE",
         status: "APPROVED",
-        date: new Date("2022-09-29T10:41:03.413"),
+        date: new Date("2022-09-29T10:41:03.413").toISOString(),
         orderId: 13535146,
       },
     ],
@@ -3191,14 +3191,14 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
     items: [
       {
         productType: "CLUB_SMILES",
-        status: "CANCELED",
-        date: new Date("2022-10-04T15:13:53.992"),
+        status: "CANCELLED",
+        date: new Date("2022-10-04T15:13:53.992").toISOString(),
         orderId: 13536719,
       },
       {
         productType: "MILES_BACK_REGULARIZATION",
         status: "CONCLUDED",
-        date: new Date("2022-10-04T15:13:53.992"),
+        date: new Date("2022-10-04T15:13:53.992").toISOString(),
         orderId: 13536719,
       },
     ],
@@ -3211,14 +3211,14 @@ export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
     items: [
       {
         productType: "CLUB_SMILES",
-        status: "CANCELED",
-        date: new Date("2022-10-03T15:50:18.609"),
+        status: "CANCELLED",
+        date: new Date("2022-10-03T15:50:18.609").toISOString(),
         orderId: 13536292,
       },
       {
         productType: "MILES_BACK_REGULARIZATION",
         status: "CONCLUDED",
-        date: new Date("2022-10-03T15:50:18.609"),
+        date: new Date("2022-10-03T15:50:18.609").toISOString(),
         orderId: 13536292,
       },
     ],

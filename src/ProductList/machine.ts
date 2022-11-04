@@ -1,6 +1,6 @@
 import { ORDERS } from '../data/mockOrders';
 import { library } from './library';
-import { LibraryType, ReturnObjectType } from './types';
+import { LibraryType, RerturnObjectItem, ReturnObjectType } from './types';
 
 const productListMachine = () => {
   try {
@@ -8,18 +8,18 @@ const productListMachine = () => {
       let returnObject: ReturnObjectType = {
         items: [],
         value: {
-          miles: 0,
-          money: 0,
+          miles: parseInt(order.totals.total.miles),
+          money: parseInt(order.totals.total.money),
         },
       };
-      returnObject.value.miles += parseInt(order.totals.total.miles);
-      returnObject.value.money += parseInt(order.totals.total.money);
       order = order.itemList.map((itemFromList: any) => {
-        let actualItem: any = {};
+        let actualItem: RerturnObjectItem = {
+          orderId: parseInt(order.orderId),
+          date: new Date(order.date).toISOString().toString(),
+          status: statusMaker(itemFromList, order.status),
+        };
 
         library.find((item: LibraryType) => {
-          actualItem.orderId = parseInt(order.orderId);
-          actualItem.date = new Date(order.date);
           if (itemFromList[item.condition[0]]) {
             if (item.condition[1] === "notNull") {
               const metConditions = item.nextCondition?.find(
@@ -52,8 +52,33 @@ const productListMachine = () => {
   }
 };
 
-const statusMaker = (order: any) => {
+const statusMaker = (item: any, status: string, subStatus?: string) => {
   try {
+    const isMilesWithPix = item.paymentData?.gateway === "PIX" && item.miles;
+    const notReceived = ["CANCELLED", "PENDING_PAYMENT", "PROCESSED"];
+
+    if (isMilesWithPix) {
+      if (status === "PROCESSED" && subStatus === "PROCESSED") {
+        return "CONCLUDED";
+      }
+      if (status === "CANCELLED") {
+        return status;
+      }
+      return "PENDING";
+    }
+
+    if (status === "PROCESSED") {
+      return "CONCLUDED";
+    }
+    if (status === "PENDING_APPROVAL") {
+      return "PAYMENT_APPROVED";
+    }
+
+    if (notReceived.includes(status)) {
+      return status;
+    } else {
+      return "RECEIVED";
+    }
   } catch (error: any) {
     console.error(error.message);
   }

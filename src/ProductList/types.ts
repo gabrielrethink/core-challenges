@@ -4,13 +4,15 @@ export type LibraryType = {
   nextCondition?: { key: string; value: string }[];
 };
 
+export type RerturnObjectItem = {
+  orderId: number;
+  date: string;
+  productType?: string;
+  status?: string;
+};
+
 export type ReturnObjectType = {
-  items: {
-    orderId: number;
-    date: Date;
-    productType: string;
-    status?: string;
-  }[];
+  items: RerturnObjectItem[];
   value: {
     miles: number;
     money: number;
