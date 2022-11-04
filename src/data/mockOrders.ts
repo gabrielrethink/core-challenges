@@ -1,5 +1,3 @@
-import { ReturnObjectType } from '../ProductList/types';
-
 export const ORDERS: any = {
   orderList: [
     {
@@ -2912,7 +2910,7 @@ export const ORDERS: any = {
   pageNumber: "0",
 };
 
-export const ORDERS_FINAL_RESPONSE: ReturnObjectType[] = [
+export const ORDERS_FINAL_RESPONSE: any = [
   {
     items: [
       {
