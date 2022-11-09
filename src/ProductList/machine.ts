@@ -95,54 +95,51 @@ const getItemList = (order: any) => {
   return items;
 };
 
-const assembleStatus = (order: any, itemList: any) => {
-  if (statusOrderPixPayment(itemList)) {
-    for (const status of statusDictionary) {
-      if (
-        order.status === status.status &&
-        order.substatus === status.substatus
-      ) {
-        console.log({ aaaa: order.orderId });
-        return status.value?.toUpperCase;
-      }
+export const assembleStatus = (order: any, itemList: any) => {
+  const isMilesWithPix =
+    itemList.paymentData?.gateway.toUpperCase() === "PIX" && itemList.miles;
+  if (isMilesWithPix && order.status != "CANCELLED") {
+    if (order.status === "PROCESSED" && order.substatus === "PROCESSED") {
+      console.log({ aaaa: order.orderId });
+      return "APPROVED";
+    } else if (order.status !== "PROCESSED" && order.status !== "CANCELLED") {
+      return "PENDING";
     }
-    console.log({ pending: order.orderId });
-    return "PENDING";
-  } else {
-    for (const iterator of statusDictionary) {
-      for (const key in iterator) {
-        console.log({ fora: key, status: order.status, id: order.orderId });
+  }
 
-        if (key === order.status) {
-          console.log({ dentro: key, status: order.status, id: order.orderId });
-          return iterator[key];
-        }
+  for (const iterator of statusDictionary) {
+    for (const key in iterator) {
+      console.log({ fora: key, status: order.status, id: order.orderId });
+
+      if (key === order.status) {
+        console.log({ dentro: key, status: order.status, id: order.orderId });
+        return iterator[key];
       }
     }
   }
 };
 
-const statusOrderPixPayment = (itemList: any) => {
-  let fullProperties = itemList;
-  let verify = false;
+// const statusOrderPixPayment = (itemList: any) => {
+//   let fullProperties = itemList;
+//   let verify = false;
 
-  for (let i = 0; i < propertiesStatus.length; i++) {
-    fullProperties = verifyPropertiesExists(
-      propertiesStatus[i],
-      fullProperties
-    );
+//   for (let i = 0; i < propertiesStatus.length; i++) {
+//     fullProperties = verifyPropertiesExists(
+//       propertiesStatus[i],
+//       fullProperties
+//     );
 
-    if (
-      propertiesStatus[i] === "paymentData.gateway" &&
-      fullProperties === "Pix"
-    ) {
-      verify = true;
-      break;
-    } else if (fullProperties === itemList) {
-      break;
-    }
-  }
-  return verify;
-};
+//     if (
+//       propertiesStatus[i] === "paymentData.gateway" &&
+//       fullProperties === "Pix"
+//     ) {
+//       verify = true;
+//       break;
+//     } else if (fullProperties === itemList) {
+//       break;
+//     }
+//   }
+//   return verify;
+// };
 
 export default { productListMachine };

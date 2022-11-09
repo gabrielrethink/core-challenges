@@ -33,18 +33,6 @@ type statusDictionaryType = {
 }[];
 
 const statusDictionary: statusDictionaryType = [
-  {
-    status: "PROCESSED",
-    substatus: "PROCESSED",
-    value: "approved",
-  },
-
-  {
-    status: "CANCELLED",
-    substatus: "CANCELLED",
-    value: "canceled",
-  },
-
   { PENDING_APPROVAL: "PAYMENT_APPROVED" },
   { PROCESSED: "CONCLUDED" },
   { CANCELLED: "CANCELLED" },
