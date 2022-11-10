@@ -12,6 +12,7 @@ const productListMachine = () => {
           money: parseInt(order.totals.total.money),
         },
       };
+
       order = order.itemList.map((itemFromList: any) => {
         let actualItem: RerturnObjectItem = {
           orderId: parseInt(order.orderId),
@@ -54,15 +55,12 @@ const productListMachine = () => {
 
 const statusMaker = (item: any, status: string, subStatus?: string) => {
   try {
-    const isMilesWithPix = item.paymentData?.gateway === "PIX" && item.miles;
     const notReceived = ["CANCELLED", "PENDING_PAYMENT", "PROCESSED"];
-
-    if (isMilesWithPix) {
+    const isMilesWithPix =
+      item.paymentData?.gateway.toUpperCase() === "PIX" && item.miles;
+    if (isMilesWithPix && status != "CANCELLED") {
       if (status === "PROCESSED" && subStatus === "PROCESSED") {
         return "CONCLUDED";
-      }
-      if (status === "CANCELLED") {
-        return status;
       }
       return "PENDING";
     }
@@ -70,6 +68,7 @@ const statusMaker = (item: any, status: string, subStatus?: string) => {
     if (status === "PROCESSED") {
       return "CONCLUDED";
     }
+
     if (status === "PENDING_APPROVAL") {
       return "PAYMENT_APPROVED";
     }
@@ -82,6 +81,14 @@ const statusMaker = (item: any, status: string, subStatus?: string) => {
   } catch (error: any) {
     console.error(error.message);
   }
+};
+
+const getLastCondition = (item: any, conditions: string[]) => {
+  let fullProprieties;
+  conditions.forEach((condition: string) => {
+    fullProprieties = item[condition];
+  });
+  return fullProprieties;
 };
 
 export default { productListMachine };
